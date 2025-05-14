@@ -14,7 +14,7 @@ jobs:
       repository: 'Silverlan/pr_source'
       branch: 'master'
       os: windows
-      build-args: '--module pr_source --access-token-fgd=BUILD_TOKEN1'
+      build-args: '--module pr_mount_external --access-token-fgd=BUILD_TOKEN1'
     secrets:
       repository_token: ${{ secrets.REPO_ACCESS_TOKEN }}
       build_token1: ${{ secrets.UTIL_FGD_TOKEN }}
