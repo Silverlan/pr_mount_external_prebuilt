@@ -15,6 +15,7 @@ jobs:
       branch: 'master'
       os: linux
       build-args: '--module pr_mount_external --access-token-fgd=BUILD_TOKEN1'
+      tag: ${{ github.event_name == 'schedule' ? 'latest' : '' }}
     secrets:
       repository_token: ${{ secrets.REPO_ACCESS_TOKEN }}
       build_token1: ${{ secrets.UTIL_FGD_TOKEN }}
