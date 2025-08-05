@@ -13,6 +13,7 @@ jobs:
     with:
       repository: 'Silverlan/pr_source'
       branch: 'master'
+      pragma-branch: 'develop'
       os: windows
       build-args: '--module pr_mount_external --access-token-fgd=BUILD_TOKEN1'
       tag: ${{ github.event_name == 'schedule' && 'latest' || '' }}
