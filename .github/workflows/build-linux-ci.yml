@@ -15,7 +15,7 @@ jobs:
       branch: 'master'
       pragma-branch: 'develop'
       os: linux
-      build-args: '--module pr_mount_external --access-token-fgd=BUILD_TOKEN1'
+      build-args: '--module pr_mount_external --cmake-arg=-DPRAGMA_ACCESS_TOKEN_FGD=BUILD_TOKEN1'
       tag: ${{ github.event_name == 'schedule' && 'latest' || '' }}
     secrets:
       repository_token: ${{ secrets.REPO_ACCESS_TOKEN }}
